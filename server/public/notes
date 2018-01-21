@@ -1,0 +1,35 @@
+<div ng-repeat="image in vm.images">
+                <h1 id="title">{{image.title}}</h1>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img ng-src="{{image.image1}}">
+                        <h2>{{image.name1}}</h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <img ng-src="{{image.image2}}">
+                        <h2>{{image.name2}}</h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <img ng-src="{{image.image3}}">
+                        <h2>{{image.name3}}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                            <img ng-src="{{image.image4}}">
+                            <h2>{{image.name4}}</h2>
+                        </div>
+                    </div>
+                
+                    <div class="col-sm-4">
+                            <img ng-src="{{image.image5}}">
+                            <h2>{{image.name5}}</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                            <img ng-src="{{image.image6}}">
+                            <h2>{{image.name6}}</h2>
+                        </div>
+                    </div>
+                </div>
+        </div>
