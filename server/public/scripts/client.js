@@ -42,6 +42,10 @@ app.controller('PictureController', ['$http', function($http) {
             synopsis: "Too funny!"
         },
         {
+            path: "images/stevie1.jpg",
+            synopsis: "My little lady!"
+        },
+        {
             path: "images/carey_darren_twins_sox.jpg",
             synopsis: "My Sister Carey and I @ Sox v. Twins"
         }

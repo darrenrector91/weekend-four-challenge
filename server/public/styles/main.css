@@ -7,7 +7,8 @@ body {
 
 .title {
     text-align: center;
-    margin: 25px 0px;
+    margin-top: 25px;
+    margin-left: 150px;
     font-size: 80px;
     font-family: 'Handlee', cursive;
     color: rgb(0, 0, 0);
@@ -19,31 +20,34 @@ ul {
 
 .list {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    margin-left: 50px;
 }
   
 img {
-    width: 349px;
+    width: 448px;
     height: 320px;
 }
 
 .photos {
-    flex: 1 0 33%;
+    flex: 1 0 25%;
     /* max-width: 33%; */
-    width: 33%;
+    width: 25%;
     position: relative;
-    width: 50%;
+    width: 33%;
     margin: 20px 20px 20px 40px;
     text-align: center;
     border: 1px solid #000;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.753), 0 6px 20px 0 rgba(0, 0, 0, 0.753);
+    display: block;
 }
 
-.list-image {
+/* .list-image {
     display: block;
-    width: 100%;
+    /* changed to auto from 100% */
+    /* width: 100; 
     height: 100%;
-}
+} */
 
 .list-caption {
     position: absolute;
@@ -52,13 +56,16 @@ img {
     right: 0;
     background-color: rgba(226, 226, 226, 0.75);
     overflow: hidden;
-    width: 100%;
+    width: 475px;
     height: 0;
     transition: .5s ease;
 }
 
 .photos:hover .list-caption {
     height: 100%;
+    margin-left: 14.25px;
+    margin-right: 500px;
+    width:475px;
     /* box-shadow: 0 4px 8px 0 rgb(163, 221, 26), 0 6px 20px 0 rgb(163, 221, 26); */
 }
 
@@ -69,6 +76,7 @@ img {
     position: absolute;
     overflow: hidden;
     top: 50%;
+    /* font starts to the left */
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -76,10 +84,15 @@ img {
     font-family: 'Istok Web', sans-serif;
     text-align: center;
 }
+
+.list-wrapper {
+    width: 475px;
+}
   
 .list-wrapper:hover {
-    border: 2px solid #000;
+    /* border: 2px solid #000; */
     cursor: pointer;
+    /* margin-left: 18px; */
 }
 
 .fa {
