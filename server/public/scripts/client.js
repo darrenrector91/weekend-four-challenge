@@ -2,7 +2,7 @@ console.log('js sourced!');
 
 var app = angular.module('pictureApp', []);
 
-app.controller('PictureController', function ($http) {
+app.controller('PictureController', ['$http', function($http) {
     console.log('PictureController loaded!');
 
     var self = this;
@@ -14,7 +14,8 @@ app.controller('PictureController', function ($http) {
         },
         {   
             path: 'images/darren_iguana_shoulder.jpg',
-            synopsis: "Charlie the Iguana"
+            synopsis: "Charlie the Iguana",
+            note: "aka 'Chucky Scales'"
         },
         {
             path: "images/stevie_couch.jpg",
@@ -44,9 +45,31 @@ app.controller('PictureController', function ($http) {
             path: "images/carey_darren_twins_sox.jpg",
             synopsis: "My Sister Carey and I @ Sox v. Twins"
         }
-
-
     ]
+}]);
 
+app.controller('VoteControllerUp', ['$http', function ($http) {
+    console.log('VoteControllerUp loaded!');
+    const self = this;
 
-});
+    self.vote = 0;
+
+    //increase vote by 1
+    self.voteUp = function() {
+        self.vote += 1;
+        return self.vote;
+    }
+}]);
+
+app.controller('VoteControllerDown', ['$http', function ($http) {
+    console.log('VoteControllerDown loaded!');
+    const self = this;
+
+    self.down_vote = 0;
+
+    //increase vote by 1
+    self.voteDown = function() {
+        self.down_vote += 1;
+        return self.down_vote;
+    }
+}]);
