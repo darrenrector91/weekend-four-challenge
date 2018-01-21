@@ -2,10 +2,18 @@ console.log('js sourced!');
 
 var app = angular.module('pictureApp', []);
 
+app.controller('TitleController', ['$http', function ($http) {
+    console.log('TitleController loaded!');
+    const self = this;
+
+    self.title = "My Life in Photos";
+
+}]);
+
 app.controller('PictureController', ['$http', function($http) {
     console.log('PictureController loaded!');
 
-    var self = this;
+    const self = this;
 
     // image data
     self.images = [{
