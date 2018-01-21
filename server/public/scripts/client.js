@@ -85,3 +85,4 @@ app.controller('VoteControllerDown', ['$http', function ($http) {
         return self.down_vote;
     }
 }]);
+

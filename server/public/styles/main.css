@@ -151,6 +151,26 @@ img {
     border: 1px solid indianred;
 }
 
+.clickCount {
+    background-color: #3b5999;
+    color: #fff;
+    font-size: 20px;
+    /* margin-top: 10px; */
+    height: 50px;
+    width: 130px;
+    padding: 0;
+    border: 1px solid #fff;
+    padding: 10px;
+    box-shadow: 5px 10px 8px #888888;
+    border-radius: 5px;
+}
+
+.clickCount:hover {
+    background-color: #fff;
+    color: #3b5999;
+    border: 1px solid #3b5999;
+}
+
 .counter {
     font-size: 30px;
     margin-bottom: 10px;
