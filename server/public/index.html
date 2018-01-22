@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,40 +15,45 @@
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/ui-bootstrap-csp.css">
     <script src="https://use.fontawesome.com/95522fa123.js"></script>
-    
+
 </head>
+
 <body ng-app=pictureApp ng-controller="PictureController as vm">
     <div class="container">
         <h1 class="title">
-            <b>My Life in Photos</b></h1>
-            <ul class="list">
-                <li class="photos" ng-repeat="image in vm.images">
-                    <div class="row list-wrapper" ng-click="imageFlip = !imageFlip">
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
-                                <img src="" alt="" class="list-image" ng-src="{{image.path}}">
-                                <div class="list-caption" ng-show="imageFlip">
-                                    <p class="list-synopsis">{{image.synopsis}} {{image.note}}</p>
-                            </div>
-                        </div>
-                        <div class="list-imageFlip">
-                            <span ng-hide="imageFlip"></span>
-                            <span ng-show="imageFlip"></span>
+            <b>My Life in Photos</b>
+        </h1>
+        <ul class="list">
+            <li class="photos" ng-repeat="image in vm.images">
+                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
+                        <img src="" alt="" class="list-image" ng-src="{{image.path}}">
+                        <div class="list-caption" ng-show="imageFlip">
+                            <p class="list-synopsis">{{image.synopsis}} {{image.note}}</p>
                         </div>
                     </div>
-                    <div class="image-vote" ng-controller="VoteControllerUp as vm">
-                        <div class="image-vote-button" ng-click="vm.voteUp()">
-                            <!-- <div class="counter"> {{vm.vote}}</div> -->
-                            <button class="btn btn-primary clickMe"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i><span cless="like">Like</span> {{vm.vote}}</button>
-                        </div>
+                    <div class="list-imageFlip">
+                        <span ng-hide="imageFlip"></span>
+                        <span ng-show="imageFlip"></span>
                     </div>
-                    <div class="image-vote" ng-controller="VoteControllerDown as vm">
-                        <div class="image-vote-down-button" ng-click="vm.voteDown()">
-                            <!-- <div class="counter"> {{vm.vote}}</div> -->
-                            <button class="btn btn-danger clickMeDown"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i><span class="Dislike">Dislike</span> {{vm.down_vote}}</button>
-                        </div>
+                </div>
+                <div class="image-vote" ng-controller="VoteControllerUp as vm">
+                    <div class="image-vote-button" ng-click="vm.voteUp()">
+                        <button class="btn btn-primary clickMe">
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                            <span class="like">Like</span>{{vm.vote}}</button>
                     </div>
-                </li>
-            </ul>   
+                </div>
+                <div class="image-vote" ng-controller="VoteControllerDown as vm">
+                    <div class="image-vote-down-button" ng-click="vm.voteDown()">
+                        <button class="btn btn-danger clickMeDown">
+                            <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                            <span class="dislike">Dislike</span>{{vm.down_vote}}</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </body>
+
 </html>
