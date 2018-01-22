@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Life in Photos</title>
+    <!-- angular -->
     <script src="vendors/angular.min.js"></script>
     <!-- scripts -->
     <script src="scripts/client.js"></script>
     <!-- styling -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Handlee|Istok+Web" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Istok+Web|Caveat" rel="stylesheet">
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/ui-bootstrap-csp.css">
     <script src="https://use.fontawesome.com/95522fa123.js"></script>
@@ -30,7 +30,9 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
                         <img src="" alt="" class="list-image" ng-src="{{image.path}}">
                         <div class="list-caption" ng-show="imageFlip">
-                            <p class="list-synopsis"><b>{{image.synopsis}} {{image.note}}</b></p>
+                            <p class="list-synopsis">
+                                <b>{{image.synopsis}} {{image.note}}</b>
+                            </p>
                         </div>
                     </div>
                     <div class="list-imageFlip">
@@ -50,6 +52,11 @@
                         <button class="btn btn-danger clickMeDown">
                             <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
                             <span class="dislike">Dislike</span>{{vm.down_vote}}</button>
+                    </div>
+                </div>
+                <div class="image-count" ng-controller="ClickController as vm">
+                    <div class="clickControl" ng-click="vm.count()">
+                        <p>{{vm.click}}</p>
                     </div>
                 </div>
             </li>

@@ -25,7 +25,7 @@ body {
 .photoTitle {
     margin-top: -70px;
     text-align: center;
-    color: #BE5A38;
+    color: rgb(167, 48, 48);
     font-family: 'Caveat', cursive;
     font-size: 125px;
     letter-spacing: 2px;
@@ -88,7 +88,6 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    /* font-size: 25px; */
     font-family: 'Istok Web', sans-serif;
     text-align: center;
 }
@@ -161,10 +160,8 @@ img {
 
 .like {
     text-align: center;
-    /* margin-right: 10px; */
 }
 
 .dislike {
     text-align: center;
-    /* margin-right: 10px; */
 }
