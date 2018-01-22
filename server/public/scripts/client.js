@@ -10,7 +10,7 @@ app.controller('TitleController', ['$http', function ($http) {
 
 }]);
 
-app.controller('PictureController', ['$http', function($http) {
+app.controller('PictureController', ['$http', function ($http) {
     console.log('PictureController loaded!');
 
     const self = this;
@@ -20,7 +20,7 @@ app.controller('PictureController', ['$http', function($http) {
             path: 'images/sara_darren_deke_wedding.jpg',
             synopsis: "My wonderful Wife Sara and I"
         },
-        {   
+        {
             path: 'images/darren_iguana_shoulder.jpg',
             synopsis: "Charlie the Iguana",
             note: "aka 'Chucky Scales'"
@@ -52,11 +52,12 @@ app.controller('PictureController', ['$http', function($http) {
         {
             path: "images/stevie1.jpg",
             synopsis: "My little lady!"
-        },
-        {
-            path: "images/carey_darren_twins_sox.jpg",
-            synopsis: "My Sister Carey and I @ Sox v. Twins"
         }
+        // },
+        // {
+        //     path: "images/carey_darren_twins_sox.jpg",
+        //     synopsis: "My Sister Carey and I @ Sox v. Twins"
+        // }
     ]
 }]);
 
@@ -67,7 +68,7 @@ app.controller('VoteControllerUp', ['$http', function ($http) {
     self.vote = 0;
 
     //increase vote by 1
-    self.voteUp = function() {
+    self.voteUp = function () {
         self.vote += 1;
         return self.vote;
     }
@@ -80,9 +81,21 @@ app.controller('VoteControllerDown', ['$http', function ($http) {
     self.down_vote = 0;
 
     //increase vote by 1
-    self.voteDown = function() {
+    self.voteDown = function () {
         self.down_vote += 1;
         return self.down_vote;
     }
 }]);
 
+// app.controller('PictureController', ['$http', function ($http) {
+//     console.log('PictureController loaded!');
+//     const self = this;
+
+//     self.click = 0;
+
+//     //increase vote by 1
+//     self.count = function () {
+//         self.click += 1;
+//         return self.click;
+//     }
+// }]);

@@ -1,19 +1,34 @@
 body {
-    max-width: 1200px;
+    max-width: auto;
     margin: 0 auto;
-    background-color: rgb(255, 255, 255);
     font-family: 'Times New Roman', Times, serif;
+}
+
+.container-fluid {
+    background: #757F9A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #D7DDE8, #757F9A);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #D7DDE8, #757F9A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .title {
     text-align: center;
-    margin: 25px 0px 0px 170px;
-    padding: 10px;
-    /* padding-bottom: 50px; */
     font-size: 80px;
     font-family: 'Handlee', cursive;
     color: rgb(0, 0, 0);
-    background-color: rgb(185, 185, 185);
+    letter-spacing: 2px;
+    padding-top: 25px;
+}
+
+.photoTitle {
+    margin-top: -70px;
+    text-align: center;
+    color: #BE5A38;
+    font-family: 'Caveat', cursive;
+    font-size: 125px;
+    letter-spacing: 2px;
 }
 
 ul {
@@ -23,11 +38,11 @@ ul {
 .list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 140px;
+    /* margin-left: 140px; */
 }
 
 img {
-    width: 403px;
+    width: 393.5px;
     height: 350px;
 }
 
@@ -35,12 +50,13 @@ img {
     flex: 1 0 25%;
     width: 25%;
     position: relative;
-    width: 33%;
+    width: 20%;
     margin: 20px 20px 20px 40px;
     text-align: center;
-    border: 1px solid #000;
+    border: 2px solid #000;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.753), 0 6px 20px 0 rgba(0, 0, 0, 0.753);
     display: block;
+    background-color: whitesmoke;
 }
 
 .list-caption {
@@ -59,26 +75,26 @@ img {
     height: 100%;
     margin-left: 14.25px;
     margin-right: 500px;
-    width: 475px;
+    width: 393.5px;
 }
 
 .list-synopsis {
     white-space: nowrap;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
+    color: rgb(7, 3, 63);
+    font-size: 22px;
     position: absolute;
     overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    font-size: 25px;
+    /* font-size: 25px; */
     font-family: 'Istok Web', sans-serif;
     text-align: center;
 }
 
 .list-wrapper {
-    width: 475px;
+    width: 450px;
 }
 
 .list-wrapper:hover {
@@ -145,10 +161,10 @@ img {
 
 .like {
     text-align: center;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 .dislike {
     text-align: center;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }

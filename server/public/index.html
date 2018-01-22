@@ -12,6 +12,7 @@
     <!-- styling -->
     <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Handlee|Istok+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/ui-bootstrap-csp.css">
     <script src="https://use.fontawesome.com/95522fa123.js"></script>
@@ -19,17 +20,17 @@
 </head>
 
 <body ng-app=pictureApp ng-controller="PictureController as vm">
-    <div class="container">
+    <div class="container-fluid">
         <h1 class="title">
-            <b>My Life in Photos</b>
-        </h1>
+            <i class="fa fa-picture-o fa-1x" aria-hidden="true"></i>my life in</h1>
+        <h1 class="photoTitle">photos</h1>
         <ul class="list">
             <li class="photos" ng-repeat="image in vm.images">
-                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip">
+                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip; count()">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
                         <img src="" alt="" class="list-image" ng-src="{{image.path}}">
                         <div class="list-caption" ng-show="imageFlip">
-                            <p class="list-synopsis">{{image.synopsis}} {{image.note}}</p>
+                            <p class="list-synopsis"><b>{{image.synopsis}} {{image.note}}</b></p>
                         </div>
                     </div>
                     <div class="list-imageFlip">
