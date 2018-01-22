@@ -29,13 +29,17 @@
                 <div class="row list-wrapper" ng-click="imageFlip = !imageFlip;vm.count(this)">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
                         <img src="" alt="" class="list-image" ng-src="{{image.path}}">
-                        
                     </div>
+
                     <div class="list-imageFlip">
                         <span ng-hide="imageFlip"></span>
                         <span ng-show="imageFlip"></span>
                     </div>
                 </div>
+                <div class="clickControl" ng-click="vm.count(this)">
+                    <p class="clickCount">{{image.click}}</p>
+                </div>
+
                 <div class="image-vote" ng-controller="VoteControllerUp as vm">
                     <div class="image-vote-button" ng-click="vm.voteUp()">
                         <button class="btn btn-primary clickMe">
@@ -50,12 +54,15 @@
                             <span class="dislike">Dislike</span>{{vm.down_vote}}</button>
                     </div>
                 </div>
-                <div class="clickControl" ng-click="vm.count(this)">
-                    <p class="clickCount">{{image.click}}</p>
-                </div>
+                <label for="comments"></label>
+                <input name="comments" type="text" class="inputBox" placeholder="Add comments">
+                <br>
+                <button class="btn btn-success">Submit</button>
             </li>
         </ul>
+
     </div>
+
 </body>
 
 </html>

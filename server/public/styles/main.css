@@ -42,7 +42,7 @@ ul {
 }
 
 img {
-    width: 388px;
+    width: 393px;
     height: 350px;
 }
 
@@ -172,6 +172,15 @@ img {
 .dislike {
     text-align: center;
     margin-right: 10px;
+}
+
+.inputBox {
+    height: 100px;
+    width: 200px;
+    /* margin-right: 100px; */
+    margin-bottom: 10px;
+    font-size: 10px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
