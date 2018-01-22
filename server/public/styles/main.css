@@ -165,3 +165,19 @@ img {
 .dislike {
     text-align: center;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="container-"] {
+        background: 100%;
+        background-color: #757F9A;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        display: block;
+        width: auto;
+        float: none;
+    }
+}
