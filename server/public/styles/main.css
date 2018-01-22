@@ -42,7 +42,7 @@ ul {
 }
 
 img {
-    width: 393.5px;
+    width: 388px;
     height: 350px;
 }
 
@@ -66,7 +66,7 @@ img {
     right: 0;
     background-color: rgba(226, 226, 226, 0.75);
     overflow: hidden;
-    width: 423px;
+    width: 420px;
     height: 0;
     transition: .5s ease;
 }
@@ -153,17 +153,25 @@ img {
     border: 1px solid indianred;
 }
 
-.counter {
+.clickCount {
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 30px;
-    margin-bottom: 10px;
+}
+
+.counter {
+    text-align: center;
+    font-size: 15px;
+    margin-left: 50px;
 }
 
 .like {
     text-align: center;
+    margin-right: 10px;
 }
 
 .dislike {
     text-align: center;
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 768px) {

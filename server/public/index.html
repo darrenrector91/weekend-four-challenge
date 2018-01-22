@@ -12,7 +12,7 @@
     <script src="scripts/client.js"></script>
     <!-- styling -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Handlee|Istok+Web|Caveat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Istok+Web|Caveat|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/ui-bootstrap-csp.css">
     <script src="https://use.fontawesome.com/95522fa123.js"></script>
@@ -26,14 +26,10 @@
         <h1 class="photoTitle">photos</h1>
         <ul class="list">
             <li class="photos" ng-repeat="image in vm.images">
-                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip; count()">
+                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip;vm.count(this)">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
                         <img src="" alt="" class="list-image" ng-src="{{image.path}}">
-                        <div class="list-caption" ng-show="imageFlip">
-                            <p class="list-synopsis">
-                                <b>{{image.synopsis}} {{image.note}}</b>
-                            </p>
-                        </div>
+                        
                     </div>
                     <div class="list-imageFlip">
                         <span ng-hide="imageFlip"></span>
@@ -54,10 +50,8 @@
                             <span class="dislike">Dislike</span>{{vm.down_vote}}</button>
                     </div>
                 </div>
-                <div class="image-count" ng-controller="ClickController as vm">
-                    <div class="clickControl" ng-click="vm.count()">
-                        <p>{{vm.click}}</p>
-                    </div>
+                <div class="clickControl" ng-click="vm.count(this)">
+                    <p class="clickCount">{{image.click}}</p>
                 </div>
             </li>
         </ul>
