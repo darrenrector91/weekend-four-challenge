@@ -67,10 +67,14 @@
                         <h2 class="commentTitle">COMMENT:</h2>
                         <textarea ng-model="vm.textarea" name="comments" type="text" class="textareaBox" placeholder="Write a comment" cols="30"
                             rows="10">Write a comment</textarea>
-                        <br>
+                       ƒ <br>
                         <button class="btn btn-success submit" ng-click="vm.submitComment(vm.textarea);switch = !switch">Submit</button>
                         <div class="commentLocation" ng-show="switch">
-                            {{vm.data}}
+                            <ul class="commentList">
+                                <hr>
+                                <li class="showComments">{{vm.data}}</li>
+                                <hr>
+                            </ul>
                         </div>
                     </div>
                 </div>

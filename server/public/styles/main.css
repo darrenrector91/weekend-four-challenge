@@ -214,10 +214,6 @@ img {
    outline: none;
 }
 
-.commentLocation {
-    border: 1px solid #000;
-}
-
 .image-vote-button {
     float: left;
 }
@@ -227,7 +223,7 @@ img {
 }
 
 .submit {
-    margin: 0px 60px 10px 0px;
+    margin: 0px 20px 10px 0px;
     width: 200px;
 }
 
@@ -238,10 +234,12 @@ img {
 .commentTitle {
     color: #3b5999;
     font-size: 18px;
-    margin-right: 168px;
+    margin-right: 350px;
 }
 
 .textareaBox {
     box-shadow: 5px 5px 5px #888888;
     margin-bottom: 10px;
+    width: 375px;
+    height: 200px;
 }
