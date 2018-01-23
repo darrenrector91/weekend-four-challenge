@@ -2,16 +2,7 @@ console.log('js sourced!');
 
 var app = angular.module('pictureApp', []);
 
-app.controller('TitleController', ['$http', function ($http) {
-    console.log('TitleController loaded!');
-    const self = this;
-
-    self.title = "My Life in Photos";
-
-}]);
-
 app.controller('PictureController', ['$http', function ($http) {
-    console.log('PictureController loaded!');
 
     const self = this;
 
@@ -53,16 +44,10 @@ app.controller('PictureController', ['$http', function ($http) {
             path: "images/stevie1.jpg",
             synopsis: "My little lady!"
         }
-        // },
-        // {
-        //     path: "images/carey_darren_twins_sox.jpg",
-        //     synopsis: "My Sister Carey and I @ Sox v. Twins"
-        // }
     ]
 }]);
 
 app.controller('VoteControllerUp', ['$http', function ($http) {
-    console.log('VoteControllerUp loaded!');
     const self = this;
 
     self.vote = 0;
@@ -75,7 +60,6 @@ app.controller('VoteControllerUp', ['$http', function ($http) {
 }]);
 
 app.controller('VoteControllerDown', ['$http', function ($http) {
-    console.log('VoteControllerDown loaded!');
     const self = this;
 
     self.down_vote = 0;
@@ -86,16 +70,3 @@ app.controller('VoteControllerDown', ['$http', function ($http) {
         return self.down_vote;
     }
 }]);
-
-// app.controller('PictureController', ['$http', function ($http) {
-//     console.log('PictureController loaded!');
-//     const self = this;
-
-//     self.click = 0;
-
-//     //increase vote by 1
-//     self.count = function () {
-//         self.click += 1;
-//         return self.click;
-//     }
-// }]);
