@@ -69,16 +69,6 @@ app.controller('PictureController', ['$http', function ($http) {
             click: 0
         }
     ]
-
-    // self.click = 0;
-
-    // //increase vote by 1
-    // self.count = function () {
-    //     console.log('count clicked');
-
-    //     self.click += 1;
-    //     return self.click;
-    // }
 }]);
 
 // controller for vote count on like button
@@ -120,13 +110,13 @@ app.controller('CommentController', ['$http', function ($http) {
 
     const self = this; //setting self
 
-    self.comment = [];
-
-    //increase vote by 1
+    // getting value from comment input
     self.submitComment = function () {
-        console.log('comment controller loaded');
-        self.comment += 1;
-        return self.comment;
+        console.log('comment controller button clicked');
+        self.data = self.textarea;
+        console.log(self.data);
+        self.textarea = [];
+
     }
 }]);
 

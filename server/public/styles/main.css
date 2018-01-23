@@ -167,11 +167,13 @@ img {
 .like {
     text-align: center;
     margin-right: 10px;
+    outline: none;
 }
 
 .dislike {
     text-align: center;
     margin-right: 10px;
+    outline: none;
 }
 
 .inputBox {
@@ -185,6 +187,19 @@ img {
     font-size: 20px;
 }
 
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    line-height:80px;
+    margin-bottom: 200px;
+}
+::-webkit-input-placeholder { /* Webkit */
+    line-height:100px;
+    margin-bottom: 200px;
+}
+:-ms-input-placeholder { /* IE */
+    line-height:100px;
+    margin-bottom: 200px;
+}
+
 .showComments {
     border-style: none;
     text-align: center;
@@ -192,11 +207,15 @@ img {
     margin-left: 10px;
     background-color: #F5F5F5;
     font-size: 40px;
-    outline: 0;
+    /* outline: 0; */
 }
 
 .showComments:active, .showComments:focus {
    outline: none;
+}
+
+.commentLocation {
+    border: 1px solid #000;
 }
 
 .image-vote-button {
@@ -208,25 +227,21 @@ img {
 }
 
 .submit {
-    margin: 10px 0px;
+    margin: 0px 60px 10px 0px;
+    width: 200px;
 }
 
 .fa-angle-double-down {
     font-size: 20px;
 }
 
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="container-"] {
-        background: 100%;
-        background-color: #757F9A;
-    }
+.commentTitle {
+    color: #3b5999;
+    font-size: 18px;
+    margin-right: 168px;
 }
 
-@media screen and (max-width: 768px) {
-    .btn {
-        display: block;
-        width: auto;
-        float: none;
-    }
+.textareaBox {
+    box-shadow: 5px 5px 5px #888888;
+    margin-bottom: 10px;
 }

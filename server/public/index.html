@@ -12,9 +12,12 @@
     <script src="scripts/client.js"></script>
     <!-- styling -->
     <link rel="stylesheet" href="styles/main.css">
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Handlee|Istok+Web|Caveat|Roboto" rel="stylesheet">
+    <!-- bootstrap -->
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/ui-bootstrap-csp.css">
+    <!-- font awesome -->
     <script src="https://use.fontawesome.com/95522fa123.js"></script>
 
 </head>
@@ -42,26 +45,33 @@
 
                 <div class="image-vote" ng-controller="VoteControllerUp as vm">
                     <div class="image-vote-button" ng-click="vm.voteUp()">
-                        <button class="btn btn-primary clickMe">
+                        <button class="btn btn-outline-primary clickMe">
                             <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
                             <span class="like">Like</span>{{vm.vote}}</button>
                     </div>
                 </div>
                 <div class="image-vote" ng-controller="VoteControllerDown as vm">
                     <div class="image-vote-down-button" ng-click="vm.voteDown()">
-                        <button class="btn btn-danger clickMeDown">
+                        <button class="btn btn-outline-danger clickMeDown">
                             <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
                             <span class="dislike">Dislike</span>{{vm.down_vote}}</button>
                     </div>
                 </div>
-                <div class="commentDiv">
-                    <button class="showComments" ng-click="toggle = !toggle">{{toggle ? Hide : Show}}<br><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
+                <div class="commentDiv" ng-controller="CommentController as vm">
+                    <button class="showComments" ng-click="toggle = !toggle">{{toggle ? Hide : Show}}
+                        <br>
+                        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                    </button>
                     <br>
                     <div class="comments" ng-show='toggle'>
-                        <label for="comments"></label>
-                        <input name="comments" type="text" class="inputBox" placeholder="Add comments">
+                        <h2 class="commentTitle">COMMENT:</h2>
+                        <textarea ng-model="vm.textarea" name="comments" type="text" class="textareaBox" placeholder="Write a comment" cols="30"
+                            rows="10">Write a comment</textarea>
                         <br>
-                        <button class="btn btn-success submit" ng-click="submitComment()" >Submit</button>
+                        <button class="btn btn-success submit" ng-click="vm.submitComment(vm.textarea);switch = !switch">Submit</button>
+                        <div class="commentLocation" ng-show="switch">
+                            {{vm.data}}
+                        </div>
                     </div>
                 </div>
 
@@ -73,3 +83,9 @@
 </body>
 
 </html>
+
+<!-- TODO: fix comment dropdown so only clicked on dropdown             activates
+           
+           
+
+-->
