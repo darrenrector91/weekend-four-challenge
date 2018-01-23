@@ -120,11 +120,11 @@ app.controller('CommentController', ['$http', function ($http) {
 
     const self = this; //setting self
 
-    self.comment = 0;
+    self.comment = [];
 
     //increase vote by 1
-    self.voteDown = function () {
-        console.log('down vote clicked');
+    self.submitComment = function () {
+        console.log('comment controller loaded');
         self.comment += 1;
         return self.comment;
     }

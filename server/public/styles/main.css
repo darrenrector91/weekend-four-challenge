@@ -178,11 +178,41 @@ img {
     height: 100px;
     width: 375px;
     /* margin-right: 100px; */
-    margin: 10px 0px;
+    /* margin: 10px 0px; */
     font-size: 10px;
     text-align: center;
     border: 1px solid #000;
-    font-size: 25px;
+    font-size: 20px;
+}
+
+.showComments {
+    border-style: none;
+    text-align: center;
+    /* width: 100px; */
+    margin-left: 10px;
+    background-color: #F5F5F5;
+    font-size: 40px;
+    outline: 0;
+}
+
+.showComments:active, .showComments:focus {
+   outline: none;
+}
+
+.image-vote-button {
+    float: left;
+}
+
+.image-vote-down-button {
+    float: right;
+}
+
+.submit {
+    margin: 10px 0px;
+}
+
+.fa-angle-double-down {
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 768px) {
