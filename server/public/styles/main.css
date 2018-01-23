@@ -176,11 +176,13 @@ img {
 
 .inputBox {
     height: 100px;
-    width: 200px;
+    width: 375px;
     /* margin-right: 100px; */
     margin: 10px 0px;
     font-size: 10px;
     text-align: center;
+    border: 1px solid #000;
+    font-size: 25px;
 }
 
 @media only screen and (max-width: 768px) {

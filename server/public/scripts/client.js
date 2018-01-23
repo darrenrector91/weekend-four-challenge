@@ -114,16 +114,19 @@ app.controller('VoteControllerDown', ['$http', function ($http) {
     }
 }]);
 
-// controller to count times image clicked
-// app.controller('ClickController', ['$http', function ($http) {
-//     console.log('ClickController loaded!');
-//     const self = this;
+// controller for comment show/hide
+app.controller('CommentController', ['$http', function ($http) {
+    console.log('CommentController loaded!');
 
-//     self.click = 0;
+    const self = this; //setting self
 
-//     //increase vote by 1
-//     self.count = function () {
-//         self.click += 1;
-//         return self.click;
-//     }
-// }]);
+    self.comment = 0;
+
+    //increase vote by 1
+    self.voteDown = function () {
+        console.log('down vote clicked');
+        self.comment += 1;
+        return self.comment;
+    }
+}]);
+

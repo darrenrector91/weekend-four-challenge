@@ -54,12 +54,17 @@
                             <span class="dislike">Dislike</span>{{vm.down_vote}}</button>
                     </div>
                 </div>
-                <button class="btn btn-success hideComments">Leave comment</button>
-                <br>
-                <label for="comments"></label>
-                <input name="comments" type="text" class="inputBox" placeholder="Add comments">
-                <br>
-                <button class="btn btn-success">Submit</button>
+                <div class="commentDiv">
+                    <button class="btn btn-success showComments" ng-click="toggle = !toggle">Leave comment {{toggle ? 'Hide' : 'Show'}}</button>
+                    <br>
+                    <div class="comments" ng-show='toggle'>
+                        <label for="comments"></label>
+                        <input name="comments" type="text" class="inputBox" placeholder="Add comments">
+                        <br>
+                        <button class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+
             </li>
         </ul>
 
