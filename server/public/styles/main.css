@@ -234,7 +234,7 @@ img {
 .commentTitle {
     color: #3b5999;
     font-size: 18px;
-    margin-right: 350px;
+    margin-right: 330px;
 }
 
 .textareaBox {
@@ -242,4 +242,34 @@ img {
     margin-bottom: 10px;
     width: 375px;
     height: 200px;
+}
+
+ ::-webkit-input-placeholder { 
+     margin-top: -20px;
+}
+
+.commentBoxTitle {
+    margin-right: 285px;
+    color: #3b5999;
+    font-size: 18px;
+}
+
+.commentTitleInput {
+    margin: 0px 200px 10px 10px;
+    box-shadow: 5px 5px 5px #888888;
+    border: 1px solid #000;
+    width: 300px;
+
+}
+
+.commentListTitle {
+    margin-top: 10px;
+    text-align: left;
+    color: #3966c7;
+    font-size: 25px;
+}
+
+.commentsList {
+    font-size: 20px;
+    text-align: left;
 }

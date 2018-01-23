@@ -1,26 +1,15 @@
-console.log('js sourced!');
-
 var app = angular.module('pictureApp', []);
 
 app.controller('PictureController', ['$http', function ($http) {
-    console.log('PictureController loaded!');
-
     const self = this;
 
     self.click = 0;
 
     //increase vote by 1
     self.count = function (image) {
-        console.log('count clicked');
-        
-        console.log(image.image.click);
-
         image.image.click += 1; //change 1st image variable to another word
-        // self.click += 1;
-        // return self.click;
-        // return image.click;
     }
-
+    
     // image data
     self.images = [{
             path: 'images/sara_darren_deke_wedding.jpg',
@@ -73,14 +62,12 @@ app.controller('PictureController', ['$http', function ($http) {
 
 // controller for vote count on like button
 app.controller('VoteControllerUp', ['$http', function ($http) {
-    console.log('VoteControllerUp loaded!');
     const self = this;
 
     self.vote = 0;
 
     //increase vote by 1
     self.voteUp = function () {
-        console.log('up vote clicked');
 
         self.vote += 1;
         return self.vote;
@@ -89,8 +76,6 @@ app.controller('VoteControllerUp', ['$http', function ($http) {
 
 // controller for vote count on dislike button
 app.controller('VoteControllerDown', ['$http', function ($http) {
-    console.log('VoteControllerDown loaded!');
-
 
     const self = this; //setting self
 
@@ -98,7 +83,6 @@ app.controller('VoteControllerDown', ['$http', function ($http) {
 
     //increase vote by 1
     self.voteDown = function () {
-        console.log('down vote clicked');
         self.down_vote += 1;
         return self.down_vote;
     }
@@ -106,17 +90,15 @@ app.controller('VoteControllerDown', ['$http', function ($http) {
 
 // controller for comment show/hide
 app.controller('CommentController', ['$http', function ($http) {
-    console.log('CommentController loaded!');
 
     const self = this; //setting self
 
+    self.date = new Date();
+
     // getting value from comment input
     self.submitComment = function () {
-        console.log('comment controller button clicked');
+        self.title = self.commentTitle;
         self.data = self.textarea;
-        console.log(self.data);
         self.textarea = [];
-
     }
 }]);
-

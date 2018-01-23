@@ -38,6 +38,7 @@
                         <span ng-hide="imageFlip"></span>
                         <span ng-show="imageFlip"></span>
                     </div>
+                    <p>{{vm.date}}</p>
                 </div>
                 <div class="clickControl" ng-click="vm.count(this)">
                     <p class="clickCount">{{image.click}}</p>
@@ -59,20 +60,27 @@
                 </div>
                 <div class="commentDiv" ng-controller="CommentController as vm">
                     <button class="showComments" ng-click="toggle = !toggle">{{toggle ? Hide : Show}}
+                            {{date | date:'yyyy-MM-dd'}}
                         <br>
                         <i class="fa fa-angle-double-down" aria-hidden="true"></i>
                     </button>
                     <br>
                     <div class="comments" ng-show='toggle'>
-                        <h2 class="commentTitle">COMMENT:</h2>
-                        <textarea ng-model="vm.textarea" name="comments" type="text" class="textareaBox" placeholder="Write a comment" cols="30"
-                            rows="10">Leave a comment</textarea>
+                        <h2 class="commentTitle">Title:</h2>
+                        <input ng-model="vm.commentTitle" type="text" class="commentTitleInput" >
+                        <h2 class="commentBoxTitle">Comment:</h2>
+                        <textarea ng-model="vm.textarea" type="text" class="textareaBox" ng-attr-placeholder="Leave a comment" cols="30"
+                            rows="5"></textarea>
                         <br>
                         <button class="btn btn-success submit" ng-click="vm.submitComment(vm.textarea);switch = !switch">Submit</button>
-                        <div class="commentLocation" ng-show="switch">
+                    </div>
+                    <div class="commentLocation" ng-show="switch">
+                        <!-- <div ng-repeat="comments in vm.submitComment"> -->
                             <ul class="commentList">
+                                <h2 class="commentListTitle">{{vm.title}}</h2>
+                                <h4>{{date | date:'yyyy-MM-dd'}}</h4>
                                 <hr>
-                                <li class="showComments">{{vm.data}}</li>
+                                <li class="commentsList">{{vm.data}}</li>
                                 <hr>
                             </ul>
                         </div>
