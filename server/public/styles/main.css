@@ -273,3 +273,9 @@ img {
     font-size: 20px;
     text-align: left;
 }
+
+#dateTime {
+    text-align: left;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
