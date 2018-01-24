@@ -27,17 +27,22 @@
         <h1 class="photoTitle">photos</h1>
         <ul class="list">
             <li class="photos" ng-repeat="image in vm.images">
-                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip;vm.count()">
+                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip;vm.count(this)">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
                         <img src="" alt="" class="list-image" ng-src="{{image.path}}">
-                        <div class="list-caption" ng-show="imageFlip">
-                            <p class="list-synopsis"><b>{{image.synopsis}} {{image.note}}</b></p>
+                        <div class="row list-caption" ng-show="imageFlip">
+                            <p class="list-synopsis">
+                                <b>{{image.synopsis}} {{image.note}}</b>
+                            </p>
                         </div>
                     </div>
                     <div class="list-imageFlip">
                         <span ng-hide="imageFlip"></span>
                         <span ng-show="imageFlip"></span>
                     </div>
+                </div>
+                <div class="clickControl" ng-click="vm.count(this)">
+                    <p class="clickCount">{{image.click}}</p>
                 </div>
                 <div class="image-vote" ng-controller="VoteControllerUp as vm">
                     <div class="image-vote-button" ng-click="vm.voteUp()">

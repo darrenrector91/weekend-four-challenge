@@ -3,8 +3,15 @@ console.log('js sourced!');
 var app = angular.module('pictureApp', []);
 
 app.controller('PictureController', ['$http', function ($http) {
-
     const self = this;
+
+    self.click = 0;
+
+    self.count = function(image) {
+        console.log(self.count);
+        
+        image.image.click +=1;
+    }
 
     // image data
     self.images = [{
