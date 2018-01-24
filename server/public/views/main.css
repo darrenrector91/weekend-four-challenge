@@ -1,0 +1,38 @@
+header {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #465B63;
+  }
+  
+  body {
+    background-color: lightgray;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #EEE;
+    font-size: 3em;
+  }
+  
+  .content {
+    background-color: whitesmoke;
+    min-height: 200px;
+  }
+  
+  .first-box {
+    background-color: #894553;
+    height: 200px;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+  }
+  
+  .second-box {
+    background-color: #A25A69;
+    height: 200px;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+  }
+  
