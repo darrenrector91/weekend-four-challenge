@@ -12,7 +12,6 @@
     <script src="scripts/client.js"></script>
     <!-- styling -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/media.css">
     <link href="https://fonts.googleapis.com/css?family=Handlee|Istok+Web" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
@@ -28,7 +27,7 @@
         <h1 class="photoTitle">photos</h1>
         <ul class="list">
             <li class="photos" ng-repeat="image in vm.images">
-                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip; count()">
+                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip;vm.count()">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
                         <img src="" alt="" class="list-image" ng-src="{{image.path}}">
                         <div class="list-caption" ng-show="imageFlip">

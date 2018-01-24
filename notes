@@ -1,0 +1,72 @@
+<body ng-app=pictureApp ng-controller="PictureController as vm">
+    <div class="container-fluid">
+        <h1 class="title">
+            <i class="fa fa-picture-o fa-1x" aria-hidden="true"></i>my life in</h1>
+        <h1 class="photoTitle">photos</h1>
+        <ul class="list">
+            <li class="photos" ng-repeat="image in vm.images">
+                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip;vm.count(this)">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
+                        <img src="" alt="" class="list-image" ng-src="{{image.path}}">
+                    </div>
+
+                    <div class="list-imageFlip">
+                        <span ng-hide="imageFlip"></span>
+                        <span ng-show="imageFlip"></span>
+                    </div>
+                    <p>{{vm.date}}</p>
+                </div>
+                <div class="clickControl" ng-click="vm.count(this)">
+                    <p class="clickCount">{{image.click}}</p>
+                </div>
+
+                <div class="image-vote" ng-controller="VoteControllerUp as vm">
+                    <div class="image-vote-button" ng-click="vm.voteUp()">
+                        <button class="btn btn-outline-primary clickMe">
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                            <span class="like">Like</span>{{vm.vote}}</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+<div ng-repeat="image in vm.images">
+                <h1 id="title">{{image.title}}</h1>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img ng-src="{{image.image1}}">
+                        <h2>{{image.name1}}</h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <img ng-src="{{image.image2}}">
+                        <h2>{{image.name2}}</h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <img ng-src="{{image.image3}}">
+                        <h2>{{image.name3}}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                            <img ng-src="{{image.image4}}">
+                            <h2>{{image.name4}}</h2>
+                        </div>
+                    </div>
+                
+                    <div class="col-sm-4">
+                            <img ng-src="{{image.image5}}">
+                            <h2>{{image.name5}}</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                            <img ng-src="{{image.image6}}">
+                            <h2>{{image.name6}}</h2>
+                        </div>
+                    </div>
+                </div>
+        </div>
