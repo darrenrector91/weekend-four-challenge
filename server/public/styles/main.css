@@ -167,19 +167,12 @@ img {
 .like {
     text-align: center;
     margin-right: 10px;
-<<<<<<< HEAD
-=======
     outline: none;
->>>>>>> feature-ng-md
 }
 
 .dislike {
     text-align: center;
     margin-right: 10px;
-<<<<<<< HEAD
-}
-
-=======
     outline: none;
 }
 
@@ -286,4 +279,3 @@ img {
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
 }
->>>>>>> feature-ng-md

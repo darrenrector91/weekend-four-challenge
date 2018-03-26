@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Life in Photos</title>
-<<<<<<< HEAD
-    <link rel="icon" href="favicon.ico">
-=======
     <!-- angular -->
->>>>>>> feature-ng-md
     <script src="vendors/angular.min.js"></script>
     <!-- scripts -->
     <script src="scripts/client.js"></script>
@@ -33,11 +29,7 @@
         <h1 class="photoTitle">photos</h1>
         <ul class="list">
             <li class="photos" ng-repeat="image in vm.images">
-<<<<<<< HEAD
-                <div class="row list-wrapper" ng-click="imageFlip = !imageFlip;vm.count()">
-=======
                 <div class="row list-wrapper" ng-click="imageFlip = !imageFlip;vm.count(this)">
->>>>>>> feature-ng-md
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4">
                         <img src="" alt="" class="list-image" ng-src="{{image.path}}">
                         <div class="list-caption" ng-show="imageFlip">
