@@ -7,9 +7,9 @@ AngularJs application to rate photos and leave comments
 ## Technologies
 
 - AngularJS
-- Angular Material
 - Node.js
 - Express.js
+- Angular Material
 - Bootstrap
 
 
