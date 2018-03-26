@@ -1,6 +1,6 @@
 # Weekend Four Challenge - AngularJS Application
 
-AngularJs application to rate photos and leave comments
+AngularJS application to rate photos and leave comments
 
 ![LifeInPhotos](https://i.imgur.com/swQvkRO.png)
 
