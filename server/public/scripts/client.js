@@ -9,19 +9,6 @@ app.controller('PictureController', ['$http', function ($http) {
     self.count = function (image) {
 
         image.image.click += 1;
-
-        // if (image.image.click % 2 != 0) {
-
-        //     console.log(true);
-            
-        // }        
-        // else {
-        //     console.log(false);
-            
-        // }
-        // // console.log(image.imageFlip);
-        // console.log(image.image.click);
-        
     }
 
     // image data
