@@ -25,7 +25,7 @@ body {
 .photoTitle {
     margin-top: -70px;
     text-align: center;
-    color: #BE5A38;
+    color: rgb(167, 48, 48);
     font-family: 'Caveat', cursive;
     font-size: 125px;
     letter-spacing: 2px;
@@ -42,7 +42,7 @@ ul {
 }
 
 img {
-    width: 393.5px;
+    width: 393px;
     height: 350px;
 }
 
@@ -66,7 +66,7 @@ img {
     right: 0;
     background-color: rgba(226, 226, 226, 0.75);
     overflow: hidden;
-    width: 423px;
+    width: 420px;
     height: 0;
     transition: .5s ease;
 }
@@ -88,7 +88,6 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    /* font-size: 25px; */
     font-family: 'Istok Web', sans-serif;
     text-align: center;
 }
@@ -154,18 +153,137 @@ img {
     border: 1px solid indianred;
 }
 
-.counter {
+.clickCount {
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 30px;
-    margin-bottom: 10px;
+}
+
+.counter {
+    text-align: center;
+    font-size: 15px;
+    margin-left: 50px;
 }
 
 .like {
     text-align: center;
     margin-right: 10px;
+<<<<<<< HEAD
+=======
+    outline: none;
+>>>>>>> feature-ng-md
 }
 
 .dislike {
     text-align: center;
     margin-right: 10px;
+<<<<<<< HEAD
 }
 
+=======
+    outline: none;
+}
+
+.inputBox {
+    height: 100px;
+    width: 375px;
+    /* margin-right: 100px; */
+    /* margin: 10px 0px; */
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid #000;
+    font-size: 20px;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    line-height:80px;
+    margin-bottom: 200px;
+}
+::-webkit-input-placeholder { /* Webkit */
+    line-height:100px;
+    margin-bottom: 200px;
+}
+:-ms-input-placeholder { /* IE */
+    line-height:100px;
+    margin-bottom: 200px;
+}
+
+.showComments {
+    border-style: none;
+    text-align: center;
+    /* width: 100px; */
+    margin-left: 10px;
+    background-color: #F5F5F5;
+    font-size: 40px;
+    /* outline: 0; */
+}
+
+.showComments:active, .showComments:focus {
+   outline: none;
+}
+
+.image-vote-button {
+    float: left;
+}
+
+.image-vote-down-button {
+    float: right;
+}
+
+.submit {
+    margin: 0px 20px 10px 0px;
+    width: 200px;
+}
+
+.fa-angle-double-down {
+    font-size: 20px;
+}
+
+.commentTitle {
+    color: #3b5999;
+    font-size: 18px;
+    margin-right: 330px;
+}
+
+.textareaBox {
+    box-shadow: 5px 5px 5px #888888;
+    margin-bottom: 10px;
+    width: 375px;
+    height: 200px;
+}
+
+ ::-webkit-input-placeholder { 
+     margin-top: -20px;
+}
+
+.commentBoxTitle {
+    margin-right: 285px;
+    color: #3b5999;
+    font-size: 18px;
+}
+
+.commentTitleInput {
+    margin: 0px 200px 10px 10px;
+    box-shadow: 5px 5px 5px #888888;
+    border: 1px solid #000;
+    width: 300px;
+
+}
+
+.commentListTitle {
+    margin-top: 10px;
+    text-align: left;
+    color: #3966c7;
+    font-size: 25px;
+}
+
+.commentsList {
+    font-size: 20px;
+    text-align: left;
+}
+
+#dateTime {
+    text-align: left;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+>>>>>>> feature-ng-md
